@@ -1,7 +1,401 @@
 // RESET BROWSER DEFAULT STYLES
 @import "_reset.scss";
 
+
+// VARIABLES
+
+$base-font: 16px;
+$base-padding: 24px;
+$base-margin: 24px;
+
+$sectionH: 600px;
+
+$white: #fff;
+$black: #030303;
+$black-secondary: #808080;
+
+// MIXINS 
+
+@mixin angle($pseudo, $flip: false, $angle: 8deg) {
+    // Possible values for $pseudo are: before, after, both
+    @if $pseudo=='before' or $pseudo=='after' or $pseudo=='both' {
+        position: relative;
+        z-index: 1;
+        $selector: if($pseudo=='both', '&:before,&:after', '&:#{$pseudo}');
+        #{$selector} {
+            background: inherit;
+            content: '';
+            display: block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            right: 0;
+            z-index: -1;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden; // for Chrome Windows
+        }
+        @if $pseudo=='before' {
+            #{$selector} {
+                top: 0;
+                transform: skewY($angle);
+                transform-origin: 100% 0;
+            }
+        }
+        @if $pseudo=='after' {
+            #{$selector} {
+                bottom: 0;
+                transform: skewY($angle);
+                transform-origin: 0;
+            }
+        }
+        @if $pseudo=='both' {
+            &:before {
+                top: 0;
+                transform: skewY($angle);
+                transform-origin: 100% 0;
+            }
+            &:after {
+                bottom: 0;
+                transform: skewY($angle);
+                transform-origin: 0;
+            }
+        }
+    }
+}
+
+@mixin brackets($pseudo, $margin: -12px) {
+    @if $pseudo=='before' or $pseudo=='after' {
+        
+        @if $pseudo=='before' {
+            color: inherit;
+            display: inline-block;
+            margin-right: $margin;
+            content: '[';
+        }
+        @if $pseudo=='after' {
+            color: inherit;
+            display: inline-block;
+            margin-left: $margin;
+            content: ']';
+        }
+    }
+}
+
+
+
 // RESUME STYLES
 
+html,
+body {
+    font-family: 'Inconsolata', monospace;
+    font-size: $base-font / 1.142;
+    font-weight: 400;
+    line-height: 1.6;
+    @media screen and (min-width: 768px) {
+        font-size: $base-font;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+h1 {
+    position: relative;
+    font-size: $base-font * 1.625;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    &:before {
+        @include brackets(before);
+    }
+    &:after {
+        @include brackets(after);
+    }
+    @media screen and (min-width: 768px) {
+        font-size: $base-font * 2.4;
+    }
+}
+
+h2 {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    font-size: $base-font * 1.5;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    &:before {
+        @include brackets(before);
+    }
+    &:after {
+        @include brackets(after);
+    }
+    @media screen and (min-width: 768px) {
+        font-size: $base-font * 1.8;
+    }
+}
+
+h3 {
+    position: relative;
+    margin-left: $base-margin / 1.333;
+    margin-bottom: $base-margin * 1.6;
+    font-size: $base-font * 1.5;
+    font-weight: 400;
+    color: lighten($black, 40%);
+    line-height: .8;
+    &.light {
+        color: darken($white, 40%);
+    }
+    @media screen and (min-width: 768px) {
+        font-size: $base-font * 1.6;
+        margin-bottom: $base-margin * 2;
+        margin-left: $base-margin;
+    }
+}
+
+h4 {
+    font-size: $base-font * 1.142;
+    font-weight: 700;
+    padding-top: $base-padding / 2;
+    @media screen and (min-width: 768px) {
+        font-size: $base-font * 1.4            
+    }
+}
+
+h5 {
+    font-size: $base-font;
+    font-weight: 400;
+    margin-bottom: $base-margin;
+    @media screen and (min-width: 768px) {
+        font-size: $base-font * 1.2;                
+    }
+}
+
+h6 {
+    font-size: $base-font / 1.142;
+    font-weight: 700;
+    position: relative;
+    color: lighten($black, 30%);
+    padding-top: $base-padding / 2;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 2px;
+        background: lighten($black, 30%);
+    }
+    &.light {
+        color: darken($white, 20%);
+        &:before {
+            background: darken($white, 20%);
+        }
+    }
+    @media screen and (min-width: 768px) {
+        font-size: $base-font;            
+    }
+}
+
+p {
+    margin-bottom: $base-margin / 2;
+}
+
+nav {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 999;
+        width: 220px;
+        & div.wrapper {
+            padding: $base-padding * 2;
+            height: 100%;
+            background: #000;
+            text-transform: uppercase;
+            @include angle(both);
+        }
+        & li {
+            color: $white;
+            margin-bottom: $base-margin;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        & a {
+            color: $white;
+        }
+    }
+}
+
+section {
+    position: relative;
+    background: $white;
+    padding: $base-padding;
+    &:first-of-type {
+        background: $black;
+        @include angle(after);
+    }
+    &:last-of-type {
+        background: $black;;
+        @include angle(before);
+    }
+    &.angle-both {
+        background: $black;;
+        @include angle(both);
+    }
+    &:nth-child(2n+1) {
+        margin-top: $sectionH / 7.5;
+        margin-bottom: $sectionH / 7.5;
+        @media screen and (min-width: 768px) {
+            margin-top: $sectionH / 3;
+            margin-bottom: $sectionH / 3;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        padding: $base-padding * 2;
+    }
+}
 
 
+
+
+
+
+
+
+// CLASS STYLES
+
+.landing-content-wrapper {
+    position: relative;
+    height: 380px;
+    width: 100%;
+    & .landing-content-inner {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        color: $white;
+        text-align: center;
+        & .sub-head {
+            font-size: $base-font * 1.15;
+            @media screen and (min-width: 768px) {
+                font-size: $base-font * 1.4;
+            }
+        }
+        & .ui-down-arrow {
+            margin-top: $base-margin * 2;
+        }
+    }
+}
+
+
+.content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    color: $black;
+    @media screen and (min-width: 768px) {
+        margin-left: 35%;
+        margin-right: 15%;
+        width: 50%;
+        max-width: 600px;
+    }
+    &.white {
+        color: $white;
+    }
+    & > p:nth-child(3) {
+        margin-left: $base-margin * 2;
+        margin-bottom: 0;
+    }
+    & .contact {
+        float: right;
+        display: block;
+        margin-top: $base-margin * 2;
+        & a {
+            display: block;
+        }
+    }
+    & .sub-content {
+        display: table;
+        margin-left: $base-margin / 1.333;
+        margin-bottom: $base-margin * 2;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        @media screen and (min-width: 768px) {
+            margin-left: $base-margin;
+        }
+        & .column {
+            display: table-cell;
+            height: 100%;
+            &.left {
+                width: 25%;
+                @media screen and (min-width: 768px) {
+                    width: 33.33%;
+                }
+            }
+            &.right {
+                width: 75%;
+                padding-left: $base-margin / 2;
+                @media screen and (min-width: 768px) {
+                    width: 66.66%;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    & .interest-wrapper {
+        margin-left: $base-margin * 2;
+        margin-bottom: $base-margin * 1.5;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        & > h5 {
+            margin-bottom: $base-margin / 4;
+            font-weight: 700;
+        }
+    }
+}
+
+section#footer {
+    height: 100px;
+    .content-footer {
+        position: relative;
+        height: 100%;
+        text-align: center;
+        & .sub-content-footer {
+            display: block;
+            margin-bottom: $base-margin;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            & a {
+                display: inline-block;
+                color: $white;
+                &:before {
+                    @include brackets(before, -3px);
+                }
+                &:after {
+                    @include brackets(after, -3px);
+                }
+            }
+        }    
+    }
+}
+
+
+#profile {
+    margin-bottom: 180px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: $sectionH / 2.5;
+    }
+}
