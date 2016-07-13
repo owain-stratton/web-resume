@@ -81,6 +81,10 @@ $black-secondary: #808080;
     }
 }
 
+@mixin link-anim($value: all, $time: .3s) {
+    transition: $value $time cubic-bezier(0, .68, .31, 1.01);
+}
+
 
 
 // RESUME STYLES
@@ -99,6 +103,42 @@ body {
 a {
     text-decoration: none;
     color: $black;
+    &.link {
+        display: inline-block;
+        position: relative;
+        font-weight: 700;
+        letter-spacing: .07em;
+        padding: $base-padding / 2;
+        overflow: hidden;
+        z-index: 1;
+        &::before {
+            content: attr(data-letters);
+            position: absolute;
+            z-index: 2;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0%;
+            @include link-anim(width, .4s)
+        }
+        &.regular {
+            color: darken($white, 20%);
+            background: $black;
+        }
+        &.inverse {
+            background: $white;
+            color: lighten($black, 30%);
+        }
+        @media screen and (min-width: 768px) {
+            &.regular:hover::before {
+                color: $white;
+                width: 100%;
+            }
+            &.inverse:hover::before {
+                color: $black;
+                width: 100%;
+            }
+        }
+    }  
 }
 
 h1 {
@@ -200,7 +240,7 @@ h6 {
 }
 
 p {
-    margin-bottom: $base-margin / 2;
+    margin-bottom: $base-margin;
 }
 
 nav {
@@ -208,11 +248,12 @@ nav {
     @media screen and (min-width: 768px) {
         display: block;
         position: fixed;
-        left: 0;
+        left: -260px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 999;
-        width: 220px;
+        width: 260px;
+        transition: left .6s cubic-bezier(0, .68, .31, 1.01);
         & div.wrapper {
             padding: $base-padding * 2;
             height: 100%;
@@ -221,14 +262,41 @@ nav {
             @include angle(both);
         }
         & li {
-            color: $white;
+            color: darken($white, 20%);
             margin-bottom: $base-margin;
             &:last-of-type {
                 margin-bottom: 0;
             }
+            &.is-active {
+                color: $white; 
+            }
         }
         & a {
-            color: $white;
+            font-size: $base-font * 1.125;
+            margin-left: $base-margin / 2;
+            color: darken($white, 20%);
+            letter-spacing: .07em;
+            display: inline-block;
+            position: relative;
+            &::before {
+                content: attr(data-letters);
+                position: absolute;
+                z-index: 2;
+                overflow: hidden;
+                white-space: nowrap;
+                width: 0%;
+                @include link-anim(width, .6s)
+            }
+            &.is-active {
+                font-weight: 700;
+                &::before {
+                    width: 100%;
+                    color: $white;
+                }
+            }
+        }
+        &.is-active {
+            left: 0;
         }
     }
 }
@@ -383,15 +451,53 @@ section#footer {
                 color: $white;
                 &:before {
                     @include brackets(before, -3px);
+                    @include link-anim;
                 }
                 &:after {
                     @include brackets(after, -3px);
+                    @include link-anim;
+                }
+                @media screen and (min-width: 768px) {
+                    &:hover:before {
+                        margin-right: 3px;
+                        @include link-anim(margin-right);
+                    }
+                    &:hover:after {
+                        margin-left: 3px;
+                        @include link-anim(margin-left);
+                    }
                 }
             }
         }    
     }
 }
 
+.node rect {
+    shape-rendering: crispEdges;
+}
+.node text {
+    pointer-events: none;
+    fill: darken($white, 20%);
+    font-size: $base-font / 1.15;
+}
+
+// ID STYLES
+
+
+#skills  {
+    height: 600px;
+    @media screen and (min-width: 768px) {
+        & .content {
+            margin-right: 5%;
+            width: 60%;
+        }
+    } 
+}
+
+#chart {
+    width: 100%;
+    height: 100%;
+}
 
 #profile {
     margin-bottom: 180px;

@@ -24,31 +24,31 @@
             <ul>
                 <li>
                     01
-                    <a href="">
+                    <a href="#profile" data-letters="profile">
                         profile
                     </a>
                 </li>
                 <li>
                     02
-                    <a href="">
+                    <a href="#skills" data-letters="skills">
                         skills
                     </a>
                 </li>
                 <li>
                     03
-                    <a href="">
+                    <a href="#experience" data-letters="experience">
                         experience
                     </a>
                 </li>
                 <li>
                     04
-                    <a href="">
+                    <a href="#education" data-letters="education">
                         education
                     </a>
                 </li>
                 <li>
                     05
-                    <a href="">
+                    <a href="#interests" data-letters="interests">
                         interests
                     </a>
                 </li>
@@ -107,6 +107,7 @@
             <h3 class="light">
                 02
             </h3>
+            <div id="chart"></div>
         </div>
     </section>
         
@@ -134,7 +135,7 @@
                     <p>
                         Co&#45;founder of Gepshepherds a geospatial design consultancy based in Sweden. Our aim is to create interactive experiences from data.
                     </p>
-                    <a href="http://geoshepherds.com">
+                    <a class="link regular" href="http://geoshepherds.com" data-letters="visit the website">
                         visit the website
                     </a>
                 </div>
@@ -203,7 +204,7 @@
                     <p>
                         Ongoing self&#45;paced education for personal skill development and to keep abreast with advances in the industry.
                     </p>
-                    <a href="https://teamtreehouse.com/geoshepherds">
+                    <a class="link inverse" href="https://teamtreehouse.com/geoshepherds" data-letters="view my credentials">
                         view my credentials
                     </a>
                 </div>
@@ -318,7 +319,9 @@
     
 
 
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="sankey.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
