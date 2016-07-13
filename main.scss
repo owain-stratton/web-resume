@@ -13,6 +13,7 @@ $sectionH: 600px;
 $white: #fff;
 $black: #030303;
 $black-secondary: #808080;
+$feat-color: #ffbc79;
 
 // MIXINS 
 
@@ -130,11 +131,11 @@ a {
         }
         @media screen and (min-width: 768px) {
             &.regular:hover::before {
-                color: $white;
+                color: $feat-color;
                 width: 100%;
             }
             &.inverse:hover::before {
-                color: $black;
+                color: darken($feat-color, 20%);
                 width: 100%;
             }
         }
@@ -268,7 +269,7 @@ nav {
                 margin-bottom: 0;
             }
             &.is-active {
-                color: $white; 
+                color: $feat-color; 
             }
         }
         & a {
@@ -291,7 +292,7 @@ nav {
                 font-weight: 700;
                 &::before {
                     width: 100%;
-                    color: $white;
+                    color: $feat-color;
                 }
             }
         }
@@ -305,10 +306,6 @@ section {
     position: relative;
     background: $white;
     padding: $base-padding;
-    &:first-of-type {
-        background: $black;
-        @include angle(after);
-    }
     &:last-of-type {
         background: $black;;
         @include angle(before);
@@ -325,6 +322,11 @@ section {
             margin-bottom: $sectionH / 3;
         }
     }
+    &:first-of-type {
+        background: $black;
+        @include angle(after);
+        margin-top: 0;
+    }
     @media screen and (min-width: 768px) {
         padding: $base-padding * 2;
     }
@@ -338,6 +340,56 @@ section {
 
 
 // CLASS STYLES
+
+@keyframes flip {
+
+	0% {
+		transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+	}
+
+	50% {
+		transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+	}
+
+	100% {
+		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+	}
+
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: $black;
+    color: $white;
+    font-size: $base-font * 2;
+    transform: translateY(0);
+    & .loader-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        & .loader-flipper {
+            transform-style: preserve-3d;
+            animation: flip 1.2s infinite ease-in-out;
+            & .right, & .left {
+                display: inline-block;
+            }
+        }
+    }
+    &.is-hidden {
+        transform: translateY(-100%);
+        transition: 1s cubic-bezier(.77, 0, .175, 1) .6s;
+        & .loader-content {
+            opacity: 0;
+            transition: .6s cubic-bezier(.77, 0, .175, 1);
+        }
+    }
+}
 
 .landing-content-wrapper {
     position: relative;
@@ -358,7 +410,27 @@ section {
             }
         }
         & .ui-down-arrow {
-            margin-top: $base-margin * 2;
+            position: relative;
+            height: 65px;
+            margin: $base-margin * 3;
+            overflow: hidden;
+            opacity: 1;
+            @include link-anim(opacity, .4s);
+            & svg {
+                height: 65px;
+                position: absolute;
+                left: 50%;
+                right: 0;
+                top: -100%;
+                transform: translateX(-50%);
+                @include link-anim(.6s);
+            }
+            &.is-active svg {
+                top: 0;
+            }
+            &.is-hidden {
+                opacity: 0;
+            }
         }
     }
 }
@@ -458,13 +530,14 @@ section#footer {
                     @include link-anim;
                 }
                 @media screen and (min-width: 768px) {
+                    &:hover {
+                        color: $feat-color;
+                    }
                     &:hover:before {
                         margin-right: 3px;
-                        @include link-anim(margin-right);
                     }
                     &:hover:after {
                         margin-left: 3px;
-                        @include link-anim(margin-left);
                     }
                 }
             }
@@ -477,15 +550,26 @@ section#footer {
 }
 .node text {
     pointer-events: none;
-    fill: darken($white, 20%);
-    font-size: $base-font / 1.15;
+    fill: darken($white, 30%);
+    font-size: $base-font / 1.454;
+    font-weight: 400;
+    opacity: 1;
+    transition: all .4s cubic-bezier(0, .68, .31, 1.01);
+    letter-spacing: .06em;
+    &.active {
+        letter-spacing: .1em;
+        fill: $white;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: $base-font / 1.142;
+    }
 }
 
 // ID STYLES
 
 
 #skills  {
-    height: 600px;
+    height: 700px;
     @media screen and (min-width: 768px) {
         & .content {
             margin-right: 5%;

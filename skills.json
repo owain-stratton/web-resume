@@ -1,6 +1,6 @@
 {
     "nodes":[
-        {"node":0,"name":"GIS"},
+        {"node":0,"name":"Geospatial"},
         {"node":1,"name":"Design"},
         {"node":2,"name":"Web"},
         {"node":3,"name":"JavaScript"},
@@ -24,27 +24,34 @@
         {"node":21,"name":"Adobe Illustrator"},
         {"node":22,"name":"Adobe Photoshop"},
         {"node":23,"name":"Mapbox"},
-        {"node":24,"name":"CartoDB"}
+        {"node":24,"name":"CartoDB"},
+        {"node":25,"name":"GIS"},
+        {"node":26,"name":"Remote Sensing"}
+        
     ],
     "links":[
-        {"source":0,"target":7,"value":10},
-        {"source":0,"target":8,"value":10},
-        {"source":0,"target":9,"value":10},
-        {"source":0,"target":10,"value":10},
-        {"source":0,"target":11,"value":10},
-        {"source":0,"target":12,"value":10},
-        {"source":0,"target":13,"value":10},
-        {"source":0,"target":23,"value":10},
-        {"source":0,"target":24,"value":10},
-        {"source":0,"target":4,"value":10},
+        {"source":0,"target":25,"value":10},
+        {"source":0,"target":26,"value":10},
+        {"source":25,"target":7,"value":10},
+        {"source":25,"target":8,"value":10},
+        {"source":25,"target":9,"value":10},
+        {"source":25,"target":12,"value":10},
+        {"source":25,"target":13,"value":10},
+        {"source":25,"target":23,"value":10},
+        {"source":25,"target":24,"value":10},
+        {"source":26,"target":11,"value":10},
+        {"source":26,"target":10,"value":10},
+        {"source":26,"target":13,"value":10},
         {"source":4,"target":12,"value":10},
         {"source":4,"target":14,"value":10},
+        {"source":5,"target":19,"value":10},
         {"source":1,"target":21,"value":10},
         {"source":1,"target":22,"value":10},
         {"source":1,"target":6,"value":10},
-        {"source":6,"target":20,"value":10},
+        {"source":1,"target":20,"value":10},
         {"source":2,"target":3,"value":10},
         {"source":2,"target":5,"value":10},
+        {"source":2,"target":4,"value":10},
         {"source":2,"target":6,"value":10},
         {"source":3,"target":15,"value":10},
         {"source":3,"target":16,"value":10},
@@ -53,6 +60,6 @@
         {"source":3,"target":19,"value":10},
         {"source":3,"target":23,"value":10},
         {"source":3,"target":24,"value":10},
-        {"source":5,"target":19,"value":10}
+        {"source":6,"target":20,"value":10}
     ]
 }
