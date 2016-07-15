@@ -3,7 +3,7 @@ $(document).ready(function() {
     
     setTimeout(function(){
         $('.loader').addClass('is-hidden');
-    }, 3000);
+    }, 2000);
     // SCROLLING EFFECTS
     
     $(window).scroll(function(){
@@ -15,11 +15,11 @@ $(document).ready(function() {
     setTimeout(function(){
         $('.ui-down-arrow').addClass('is-active');
         $('.sub-head').addClass('is-active');
-    }, 7000), setTimeout(function(){
+    }, 5600), setTimeout(function(){
         $('.ui-down-arrow span').addClass('is-active');
-    }, 7400), setTimeout(function(){
+    }, 6000), setTimeout(function(){
         animateName();    
-    }, 4200);
+    }, 2800);
     
     
     function animateName() {
