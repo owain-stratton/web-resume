@@ -86,6 +86,14 @@ $feat-color: #ffbc79;
     transition: $value $time cubic-bezier(0, .68, .31, 1.01);
 }
 
+@mixin stroke($sdo, $sda) {
+    stroke-dashoffset: $sdo;
+    stroke-dasharray: $sda;
+}
+
+@mixin transition($dur, $del) {
+    transition: $dur $del ease-in-out;
+}
 
 
 // RESUME STYLES
@@ -153,6 +161,8 @@ h1 {
     &:after {
         @include brackets(after);
     }
+    color: $white;
+    text-shadow: 2px 2px 2px 2px darken($white, 60%);
     @media screen and (min-width: 768px) {
         font-size: $base-font * 2.4;
     }
@@ -306,10 +316,6 @@ section {
     position: relative;
     background: $white;
     padding: $base-padding;
-    &:last-of-type {
-        background: $black;;
-        @include angle(before);
-    }
     &.angle-both {
         background: $black;;
         @include angle(both);
@@ -326,6 +332,11 @@ section {
         background: $black;
         @include angle(after);
         margin-top: 0;
+    }
+    &:last-of-type {
+        background: $black;;
+        @include angle(before);
+        margin-bottom: 0;
     }
     @media screen and (min-width: 768px) {
         padding: $base-padding * 2;
@@ -405,18 +416,37 @@ section {
         text-align: center;
         & .sub-head {
             font-size: $base-font * 1.15;
+            color: darken($white, 10%);
+            margin-top: 0;
+            opacity: 0;
+            @include transition(.8s, .1s);
             @media screen and (min-width: 768px) {
                 font-size: $base-font * 1.4;
+            }
+            &.is-active {
+                opacity: 1;
+                margin-top: $base-margin;
             }
         }
         & .ui-down-arrow {
             position: relative;
-            height: 65px;
-            margin: $base-margin * 3;
+            height: 89px;
+            margin-top: $base-margin * 2;
             overflow: hidden;
             opacity: 1;
             @include link-anim(opacity, .4s);
-            & svg {
+            & span {
+                opacity: 0;
+                text-transform: uppercase;
+                font-size: $base-font / 1.4;
+                color: darken($white, 10%);
+                letter-spacing: .1em;
+                @include link-anim(opacity, .4s);
+                &.is-active {
+                    opacity: 1;
+                }
+            }
+            & #arrow {
                 height: 65px;
                 position: absolute;
                 left: 50%;
@@ -425,11 +455,14 @@ section {
                 transform: translateX(-50%);
                 @include link-anim(.6s);
             }
-            &.is-active svg {
-                top: 0;
+            &.is-active #arrow {
+                top: 24px;
             }
             &.is-hidden {
                 opacity: 0;
+            }
+            @media screen and (min-width: 768px) {
+                margin-top: $base-margin * 3;
             }
         }
     }
@@ -452,9 +485,12 @@ section {
     &.white {
         color: $white;
     }
-    & > p:nth-child(3) {
+    & > p {
         margin-left: $base-margin * 2;
-        margin-bottom: 0;
+        margin-bottom: $base-margin;
+        & span {
+            font-weight: 700;
+        }
     }
     & .contact {
         float: right;
@@ -507,10 +543,13 @@ section {
 }
 
 section#footer {
-    height: 100px;
+    height: 300px;
+    padding: 0;
     .content-footer {
-        position: relative;
-        height: 100%;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
         text-align: center;
         & .sub-content-footer {
             display: block;
@@ -565,27 +604,471 @@ section#footer {
     }
 }
 
+.proj-content {
+    margin-top: $base-margin * 2;
+    display: block;
+    width: 100%;
+    position: relative;
+    & a {
+        color: $white;
+        display: block;
+        text-align: center;
+        @include link-anim(.6s);
+        & span {
+            display: block;
+            margin-top: $base-margin / 2;
+            &:before {
+                @include brackets(before, 0px);
+                @include link-anim(margin-right, .6s);
+            }
+            &:after {
+                @include brackets(after, 0px);
+                @include link-anim(margin-left, .6s);
+            }  
+        }
+        @media screen and (min-width: 768px) {
+            &:hover {
+                color: $feat-color;
+            }
+            &:hover span:before {
+                margin-right: 6px;
+            }
+            &:hover span:after {
+                margin-left: 6px;
+            }
+        }
+    }
+    @media screen and (min-width: 768px) {
+        margin-top: $base-margin * 4;
+    }
+}
+
+.proj-content a #github-logo {
+    @include link-anim(.6s);
+}
+
+.proj-content a:hover #github-logo {
+    fill: $feat-color;
+}
+
+
+
+.fill-1, .fill-2, .fill-3 {
+    stroke-width: 7.5px;
+}
+
+#bracket-start {
+    & .outline-1 {
+        @include stroke(84, 84);
+    }
+    & .outline-2 {
+        @include stroke(60, 60);
+    }
+    & .fill-1 {
+        @include stroke(72, 72);
+    }
+    &.animated {
+        & .outline-1 {
+            @include transition(.4s, .2s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-2 {
+            @include transition(.6s, .3s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-1 {
+            @include transition(1s, .4s);
+            stroke-dashoffset: 0;
+        }
+    }
+}
+#bracket-end {
+    & .outline-1 {
+        @include stroke(61, 61);
+    }
+    & .outline-2 {
+        @include stroke(84, 84);
+    }
+    & .fill-1 {
+        @include stroke(72, 72);
+    }
+    &.animated {
+        & .outline-1 {
+            @include transition(.4s, .2s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-2 {
+            @include transition(.6s, .3s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-1 {
+            @include transition(1s, .4s);
+            stroke-dashoffset: 0;
+        }
+    }
+}
+#letter-o1, #letter-o2 {
+    & .outline-1 {
+        @include stroke(108, 108);
+    }
+    & .outline-2 {
+        @include stroke(68, 68);
+    }
+    & .fill-1 {
+        @include stroke(88, 88);
+    }
+    &.animated {
+        & .outline-1 {
+            @include transition(.2s, .2s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-2 {
+            @include transition(.6s, .3s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-1 {
+            @include transition(1s, .4s);
+            stroke-dashoffset: 0;
+        }
+    }
+}
+#letter-w {
+    & .outline-1 {
+        @include stroke(89, 89);
+    }
+    & .outline-2 {
+        @include stroke(132, 132);
+    }
+    & .fill-1 {
+        @include stroke(128, 128);
+    }
+    &.animated {
+        & .outline-1 {
+            @include transition(.6s, .4s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-2 {
+            @include transition(.2s, .3s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-1 {
+            @include transition(1s, .4s);
+            stroke-dashoffset: 0;
+        }
+    }
+}
+#letter-a1, #letter-a2 {
+    opacity: 0;
+    & .outline-1 {
+        @include stroke(30, 30);
+    }
+    & .outline-2 {
+        @include stroke(82, 82);
+    }
+    & .outline-3 {
+        @include stroke(32, 32);
+    }
+    & .fill-1 {
+        @include stroke(72, 72);
+    }
+    & .fill-2 {
+        @include stroke(15, 15);
+    }
+    &.animated {
+        opacity: 1;
+        & .outline-1 {
+            @include transition(.6s, .4s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-2 {
+            @include transition(.2s, .3s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-3 {
+            @include transition(.4s, .1s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-1 {
+            @include transition(1s, .4s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-2 {
+            @include transition(1s, .6s);
+            stroke-dashoffset: 0;
+        }
+    }
+}
+#letter-i {
+    & .outline-1 {
+        @include stroke(21, 21);
+    }
+    & .outline-2 {
+        @include stroke(22, 22);
+    }
+    & .outline-3 {
+        @include stroke(43, 43);
+    }
+    & .outline-4 {
+        @include stroke(39, 39);
+    }
+    & .fill-1 {
+        @include stroke(55, 55);
+    }
+    & .fill-2 {
+        @include stroke(11, 11);
+    }
+    & .fill-3 {
+        @include stroke(9, 9);
+    }
+    &.animated {
+        & .outline-1 {
+            @include transition(.6s, .4s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-2 {
+            @include transition(.2s, .3s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-3 {
+            @include transition(.4s, .1s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-4 {
+            @include transition(.6s, .4s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-1 {
+            @include transition(1s, .4s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-2 {
+            @include transition(1s, .6s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-3 {
+            @include transition(.4s, 1s);
+            stroke-dashoffset: 0;
+        }
+    }
+}
+#letter-n1 {
+    & .outline-1, & .outline-2 {
+        @include stroke(103, 103);
+    }
+    & .fill-1 {
+        @include stroke(104, 104);
+    }
+    &.animated {
+        & .outline-1 {
+            @include transition(.6s, .4s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-2 {
+            @include transition(.2s, .3s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-1 {
+            @include transition(1s, .4s);
+            stroke-dashoffset: 0;
+        }
+    }
+}
+#letter-s {
+    & .outline-1 {
+        @include stroke(77, 77);
+    }
+    & .outline-2 {
+        @include stroke(76, 76);
+    }
+    & .fill-1 {
+        @include stroke(76, 76);
+    }
+    &.animated {
+        & .outline-1 {
+            @include transition(.6s, .4s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-2 {
+            @include transition(.2s, .3s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-1 {
+            @include transition(1s, .4s);
+            stroke-dashoffset: 0;
+        }
+    }
+}
+#letter-t1 {
+    & .outline-1 {
+        @include stroke(28, 28);
+    }
+    & .outline-2 {
+        @include stroke(42, 42);
+    }
+    & .outline-3 {
+        @include stroke(42, 42);
+    }
+    & .fill-1 {
+        @include stroke(27, 27);
+    }
+    & .fill-2 {
+        @include stroke(34, 34);
+    }
+    &.animated {
+        & .outline-1 {
+            @include transition(.6s, .4s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-2 {
+            @include transition(.2s, .3s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-3 {
+            @include transition(.6s, .1s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-1 {
+            @include transition(1s, .8s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-2 {
+            @include transition(1s, .4s);
+            stroke-dashoffset: 0;
+        }
+    }
+}
+#letter-r {
+    & .outline-1 {
+        @include stroke(98, 98);
+    }
+    & .outline-2 {
+        @include stroke(37, 37);
+    }
+    & .outline-3 {
+        @include stroke(39, 39);
+    }
+    & .fill-1 {
+        @include stroke(89, 89);
+    }
+    & .fill-2 {
+        @include stroke(10, 10);
+    }
+    &.animated {
+        & .outline-1 {
+            @include transition(.6s, .4s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-2 {
+            @include transition(.2s, .3s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-3 {
+            @include transition(.6s, .1s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-1 {
+            @include transition(1s, .8s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-2 {
+            @include transition(1s, .4s);
+            stroke-dashoffset: 0;
+        }
+    }
+}
+#letter-t2, #letter-t3 {
+    opacity: 0;
+    & .outline-1 {
+        @include stroke(42, 42);
+    }
+    & .outline-2 {
+        @include stroke(28, 28);
+    }
+    & .outline-3 {
+        @include stroke(42, 42);
+    }
+    & .fill-1 {
+        @include stroke(27, 27);
+    }
+    & .fill-2 {
+        @include stroke(34, 34);
+    }
+    &.animated {
+        opacity: 1;
+        & .outline-1 {
+            @include transition(.6s, .4s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-2 {
+            @include transition(.2s, .3s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-3 {
+            @include transition(.6s, .1s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-1 {
+            @include transition(1s, .8s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-2 {
+            @include transition(1s, .4s);
+            stroke-dashoffset: 0;
+        }
+    }
+}
+#letter-n2 {
+    & .outline-1 {
+        @include stroke(100, 100);
+    }
+    & .outline-2 {
+        @include stroke(102, 102);
+    }
+    & .fill-1 {
+        @include stroke(103, 103);
+    }
+    &.animated {
+        & .outline-1 {
+            @include transition(.6s, .4s);
+            stroke-dashoffset: 0;
+        }
+        & .outline-2 {
+            @include transition(.2s, .3s);
+            stroke-dashoffset: 0;
+        }
+        & .fill-1 {
+            @include transition(1s, .4s);
+            stroke-dashoffset: 0;
+        }
+    }
+}
+
 // ID STYLES
 
 
 #skills  {
-    height: 700px;
+    height: 750px;
     @media screen and (min-width: 768px) {
-        & .content {
-            margin-right: 5%;
-            width: 60%;
+        & {
+            height: auto;
+            & .content {
+                margin-right: 5%;
+                width: 60%;
+            }
         }
     } 
-}
-
-#chart {
-    width: 100%;
-    height: 100%;
 }
 
 #profile {
     margin-bottom: 180px;
     @media screen and (min-width: 768px) {
         margin-bottom: $sectionH / 2.5;
+    }
+}
+
+#name {
+    width: 320px;
+    @media screen and (min-width: 620px) {
+        width: 486px;
     }
 }

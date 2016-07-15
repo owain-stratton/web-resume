@@ -14,7 +14,23 @@ $(document).ready(function() {
     
     setTimeout(function(){
         $('.ui-down-arrow').addClass('is-active');
-    }, 4000)
+        $('.sub-head').addClass('is-active');
+    }, 7000), setTimeout(function(){
+        $('.ui-down-arrow span').addClass('is-active');
+    }, 7400), setTimeout(function(){
+        animateName();    
+    }, 4200);
+    
+    
+    function animateName() {
+        $('#name g').each(function(i){
+            var g = $(this);
+            setTimeout(function(){
+                g.addClass('animated');
+            }, 100 * i);
+        });
+    }
+    
     
     $('a[href^="#"]').on('click', function(event) {
         
@@ -299,7 +315,7 @@ $(document).ready(function() {
             if ($(window).width() >= 768) {
                 height = 600;
             } else {
-                height = 450;
+                height = 500;
             }
 
 
