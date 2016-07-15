@@ -549,6 +549,7 @@ section#footer {
         position: absolute;
         top: 30%;
         left: 50%;
+        width: 100%;
         transform: translate(-50%, -30%);
         text-align: center;
         & .sub-content-footer {
@@ -1047,7 +1048,7 @@ section#footer {
 
 
 #skills  {
-    height: 750px;
+    height: 850px;
     & .ui-prompt {
         font-size: $base-font / 1.2;
         color: darken($white, 20%);
