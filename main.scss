@@ -439,7 +439,7 @@ section {
                 opacity: 0;
                 text-transform: uppercase;
                 font-size: $base-font / 1.4;
-                color: darken($white, 10%);
+                color: $feat-color;
                 letter-spacing: .1em;
                 @include link-anim(opacity, .4s);
                 &.is-active {
@@ -1048,12 +1048,28 @@ section#footer {
 
 #skills  {
     height: 750px;
+    & .ui-prompt {
+        font-size: $base-font / 1.2;
+        color: darken($white, 20%);
+        & .desktop {
+            display: none;
+        }
+        & .mobile {
+            display: block;
+        }
+    }
     @media screen and (min-width: 768px) {
         & {
             height: auto;
             & .content {
                 margin-right: 5%;
                 width: 60%;
+                & .mobile {
+                    display: none;
+                }
+                & .desktop {
+                    display: block;
+                }
             }
         }
     } 
