@@ -123,7 +123,7 @@ $(document).ready(function() {
 
   var path = sankey.link();
 
-  d3.json('../data/skills.json', function(error, data) {
+  d3.json('../web-resume/data/skills.json', function(error, data) {
 
     sankey
       .nodes(data.nodes)
