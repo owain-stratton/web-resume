@@ -1,0 +1,53 @@
+/*
+Error: Invalid CSS after "0": expected expression (e.g. 1px, bold), was ";"
+        on line 14 of ./styles/main.css
+
+9: table, caption, tbody, tfoot, thead, tr, th, td,
+10: article, aside, canvas, details, embed,
+11: figure, figcaption, footer, header, hgroup,
+12: menu, nav, output, ruby, section, summary,
+13: time, mark, audio, video {
+14:   margin: 0;
+15:   padding: 0;
+16:   border: 0;
+17:   font-size: 100%;
+18:   font: inherit;
+19:   vertical-align: baseline; }
+
+Backtrace:
+./styles/main.css:14
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/lexer.rb:229:in `expected!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/parser.rb:738:in `assert_done'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/parser.rb:76:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/parser.rb:240:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script.rb:27:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:1151:in `parse_script'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:721:in `parse_property'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:692:in `parse_property_or_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:658:in `parse_line'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:536:in `build_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:555:in `block in append_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:554:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:554:in `append_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:545:in `block in build_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:538:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:538:in `build_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:555:in `block in append_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:554:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:554:in `append_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:409:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:391:in `run'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"0\": expected expression (e.g. 1px, bold), was \";\"\A         on line 14 of ./styles/main.css\A \A 9: table, caption, tbody, tfoot, thead, tr, th, td,\A 10: article, aside, canvas, details, embed,\A 11: figure, figcaption, footer, header, hgroup,\A 12: menu, nav, output, ruby, section, summary,\A 13: time, mark, audio, video {\A 14:   margin: 0;\A 15:   padding: 0;\A 16:   border: 0;\A 17:   font-size: 100%;\A 18:   font: inherit;\A 19:   vertical-align: baseline; }"; }

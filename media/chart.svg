@@ -1,0 +1,332 @@
+<svg width="600" height="600" id="sankeySVG">
+  <g>
+    <g>
+      <path
+        class="link"
+        d="M12,552.8423981358214C153,552.8423981358214 153,561.9735965373026 294,561.9735965373026"
+        id="link-17"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M12,107.75986781826848C153,107.75986781826848 153,88.7671606010857 294,88.7671606010857"
+        id="link-0"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,102.10049393441903C447,102.10049393441903 447,95.99999999999984 588,95.99999999999984"
+        id="link-2"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,115.43382726775236C447,115.43382726775236 447,121.33333333333319 588,121.33333333333319"
+        id="link-3"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,128.7671606010857C447,128.7671606010857 447,146.66666666666652 588,146.66666666666652"
+        id="link-4"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,142.100493934419C447,142.100493934419 447,171.99999999999986 588,171.99999999999986"
+        id="link-5"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,88.7671606010857C447,88.7671606010857 447,6.666666666666481 588,6.666666666666481"
+        id="link-6"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,155.43382726775235C447,155.43382726775235 447,210.66666666666654 588,210.66666666666654"
+        id="link-7"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,168.7671606010857C447,168.7671606010857 447,249.33333333333323 588,249.33333333333323"
+        id="link-8"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,220.76716060108566C447,220.76716060108566 447,70.6666666666665 588,70.6666666666665"
+        id="link-9"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,207.43382726775235C447,207.43382726775235 447,45.33333333333315 588,45.33333333333315"
+        id="link-10"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,194.100493934419C447,194.100493934419 447,19.999999999999815 588,19.999999999999815"
+        id="link-11"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,484.64026320396914C447,484.64026320396914 447,185.3333333333332 588,185.3333333333332"
+        id="link-12"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,497.97359653730246C447,497.97359653730246 447,287.99999999999994 588,287.99999999999994"
+        id="link-13"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,523.3069298706358C447,523.3069298706358 447,326.6666666666666 588,326.6666666666666"
+        id="link-14"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M12,566.1757314691547C300,566.1757314691547 300,567.9999999999999 588,567.9999999999999"
+        id="link-15"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M12,579.5090648024881C300,579.5090648024881 300,593.3333333333333 588,593.3333333333333"
+        id="link-16"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M12,121.0932011516018C153,121.0932011516018 153,194.100493934419 294,194.100493934419"
+        id="link-1"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M12,539.5090648024881C300,539.5090648024881 300,529.3333333333333 588,529.3333333333333"
+        id="link-18"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M12,380.61200479004174C153,380.61200479004174 153,339.3069298706358 294,339.3069298706358"
+        id="link-19"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M12,407.2786714567084C153,407.2786714567084 153,523.3069298706358 294,523.3069298706358"
+        id="link-20"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M12,393.94533812337505C153,393.94533812337505 153,484.64026320396914 294,484.64026320396914"
+        id="link-21"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M12,420.61200479004174C153,420.61200479004174 153,548.6402632039692 294,548.6402632039692"
+        id="link-22"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,379.3069298706358C447,379.3069298706358 447,351.99999999999994 588,351.99999999999994"
+        id="link-23"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,392.64026320396914C447,392.64026320396914 447,377.33333333333326 588,377.33333333333326"
+        id="link-24"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,405.9735965373025C447,405.9735965373025 447,402.6666666666666 588,402.6666666666666"
+        id="link-25"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,419.3069298706358C447,419.3069298706358 447,427.9999999999999 588,427.9999999999999"
+        id="link-26"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,365.9735965373025C447,365.9735965373025 447,313.33333333333326 588,313.33333333333326"
+        id="link-27"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,339.3069298706358C447,339.3069298706358 447,223.9999999999999 588,223.9999999999999"
+        id="link-28"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,352.64026320396914C447,352.64026320396914 447,262.6666666666666 588,262.6666666666666"
+        id="link-29"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,548.6402632039692C447,548.6402632039692 447,542.6666666666666 588,542.6666666666666"
+        id="link-30"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,432.64026320396914C447,432.64026320396914 447,453.3333333333332 588,453.3333333333332"
+        id="link-31"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link active"
+        d="M306,445.97359653730246C447,445.97359653730246 447,478.6666666666666 588,478.6666666666666"
+        id="link-32"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+      <path
+        class="link"
+        d="M306,459.30692987063577C447,459.30692987063577 447,503.99999999999994 588,503.99999999999994"
+        id="link-33"
+        shape-rendering="optimizeQuality"
+        style="stroke-width: 13.3333; fill: none; opacity: 0.4; stroke: rgb(255, 188, 121); stroke-opacity: 0.4;"></path>
+    </g>
+    <g>
+      <g class="node" transform="translate(0, 101.0932011516018)">
+        <rect height="26.666666666666664" width="12" id="id-0" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="18" y="13.333333333333332" dy=".3em" text-anchor="start" id="textid-0">Geospatial</text>
+      </g>
+      <g class="node" transform="translate(0, 532.8423981358214)">
+        <rect height="53.33333333333333" width="12" id="id-1" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="18" y="26.666666666666664" dy=".3em" text-anchor="start" id="textid-1">Design</text>
+      </g>
+      <g class="node" transform="translate(0, 373.94533812337505)">
+        <rect height="53.33333333333333" width="12" id="id-2" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="18" y="26.666666666666664" dy=".3em" text-anchor="start" id="textid-2">Web</text>
+      </g>
+      <g class="node" transform="translate(294, 332.64026320396914)">
+        <rect height="133.33333333333331" width="12" id="id-3" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="66.66666666666666" dy=".3em" text-anchor="end" id="textid-3" class="">JavaScript</text>
+      </g>
+      <g class="node" transform="translate(294, 477.97359653730246)">
+        <rect height="26.666666666666664" width="12" id="id-4" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="13.333333333333332" dy=".3em" text-anchor="end" id="textid-4">SQL</text>
+      </g>
+      <g class="node" transform="translate(294, 516.6402632039692)">
+        <rect height="13.333333333333332" width="12" id="id-5" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="6.666666666666666" dy=".3em" text-anchor="end" id="textid-5">HTML5</text>
+      </g>
+      <g class="node" transform="translate(294, 541.9735965373026)">
+        <rect height="26.666666666666664" width="12" id="id-6" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="13.333333333333332" dy=".3em" text-anchor="end" id="textid-6">CSS3</text>
+      </g>
+      <g class="node" transform="translate(588, 89.33333333333317)">
+        <rect height="13.333333333333332" width="12" id="id-7" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="6.666666666666666" dy=".3em" text-anchor="end" id="textid-7">QGIS</text>
+      </g>
+      <g class="node" transform="translate(588, 114.66666666666652)">
+        <rect height="13.333333333333332" width="12" id="id-8" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="6.666666666666666" dy=".3em" text-anchor="end" id="textid-8">ArcGIS</text>
+      </g>
+      <g class="node" transform="translate(588, 139.99999999999986)">
+        <rect height="13.333333333333332" width="12" id="id-9" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="6.666666666666666" dy=".3em" text-anchor="end" id="textid-9">MapInfo</text>
+      </g>
+      <g class="node" transform="translate(588, 38.66666666666649)">
+        <rect height="13.333333333333332" width="12" id="id-10" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="6.666666666666666" dy=".3em" text-anchor="end" id="textid-10">PCI Geomatica</text>
+      </g>
+      <g class="node" transform="translate(588, 63.99999999999983)">
+        <rect height="13.333333333333332" width="12" id="id-11" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="6.666666666666666" dy=".3em" text-anchor="end" id="textid-11">Erdas</text>
+      </g>
+      <g class="node" transform="translate(588, 165.3333333333332)">
+        <rect height="26.666666666666664" width="12" id="id-12" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="13.333333333333332" dy=".3em" text-anchor="end" id="textid-12">PostGIS</text>
+      </g>
+      <g class="node" transform="translate(588, -1.8474111129762605e-13)">
+        <rect height="26.666666666666664" width="12" id="id-13" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="13.333333333333332" dy=".3em" text-anchor="end" id="textid-13">GDAL</text>
+      </g>
+      <g class="node" transform="translate(588, 281.33333333333326)">
+        <rect height="13.333333333333332" width="12" id="id-14" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="6.666666666666666" dy=".3em" text-anchor="end" id="textid-14">PostgreSQL</text>
+      </g>
+      <g class="node" transform="translate(588, 345.33333333333326)">
+        <rect height="13.333333333333332" width="12" id="id-15" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="6.666666666666666" dy=".3em" text-anchor="end" id="textid-15">jQuery</text>
+      </g>
+      <g class="node" transform="translate(588, 370.6666666666666)">
+        <rect height="13.333333333333332" width="12" id="id-16" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="6.666666666666666" dy=".3em" text-anchor="end" id="textid-16">LeafletJS</text>
+      </g>
+      <g class="node" transform="translate(588, 395.9999999999999)">
+        <rect height="13.333333333333332" width="12" id="id-17" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="6.666666666666666" dy=".3em" text-anchor="end" id="textid-17">D3.js</text>
+      </g>
+      <g class="node" transform="translate(588, 421.3333333333332)">
+        <rect height="13.333333333333332" width="12" id="id-18" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="6.666666666666666" dy=".3em" text-anchor="end" id="textid-18">OpenLayers</text>
+      </g>
+      <g class="node" transform="translate(588, 306.6666666666666)">
+        <rect height="26.666666666666664" width="12" id="id-19" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="13.333333333333332" dy=".3em" text-anchor="end" id="textid-19">AngularJS</text>
+      </g>
+      <g class="node" transform="translate(588, 522.6666666666666)">
+        <rect height="26.666666666666664" width="12" id="id-20" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="13.333333333333332" dy=".3em" text-anchor="end" id="textid-20">Sass</text>
+      </g>
+      <g class="node" transform="translate(588, 561.3333333333333)">
+        <rect height="13.333333333333332" width="12" id="id-21" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="6.666666666666666" dy=".3em" text-anchor="end" id="textid-21">Adobe Illustrator</text>
+      </g>
+      <g class="node" transform="translate(588, 586.6666666666666)">
+        <rect height="13.333333333333332" width="12" id="id-22" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="6.666666666666666" dy=".3em" text-anchor="end" id="textid-22">Adobe Photoshop</text>
+      </g>
+      <g class="node" transform="translate(588, 203.9999999999999)">
+        <rect height="26.666666666666664" width="12" id="id-23" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="13.333333333333332" dy=".3em" text-anchor="end" id="textid-23">Mapbox</text>
+      </g>
+      <g class="node" transform="translate(588, 242.66666666666657)">
+        <rect height="26.666666666666664" width="12" id="id-24" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="13.333333333333332" dy=".3em" text-anchor="end" id="textid-24">CartoDB</text>
+      </g>
+      <g class="node" transform="translate(294, 82.10049393441903)">
+        <rect height="93.33333333333333" width="12" id="id-25" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="46.666666666666664" dy=".3em" text-anchor="end" id="textid-25">GIS</text>
+      </g>
+      <g class="node" transform="translate(294, 187.43382726775235)">
+        <rect height="40" width="12" id="id-26" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="20" dy=".3em" text-anchor="end" id="textid-26">Remote Sensing</text>
+      </g>
+      <g class="node" transform="translate(588, 446.6666666666665)">
+        <rect height="13.333333333333332" width="12" id="id-27" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="6.666666666666666" dy=".3em" text-anchor="end" id="textid-27">Node.js</text>
+      </g>
+      <g class="node" transform="translate(588, 471.9999999999999)">
+        <rect height="13.333333333333332" width="12" id="id-28" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="6.666666666666666" dy=".3em" text-anchor="end" id="textid-28" class="">Gulpjs</text>
+      </g>
+      <g class="node" transform="translate(588, 497.33333333333326)">
+        <rect height="13.333333333333332" width="12" id="id-29" style="fill: rgb(255, 188, 121); opacity: 0.5;"></rect>
+        <text x="-6" y="6.666666666666666" dy=".3em" text-anchor="end" id="textid-29">Mocha</text>
+      </g>
+    </g>
+  </g>
+</svg>
